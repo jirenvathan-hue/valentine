@@ -3,10 +3,17 @@ const yesBtn = document.getElementById("yesBtn");
 const song = document.getElementById("song");
 
 const playlist = [
-    "music/perfect-song.mp3",
     "music/maroonsugar-song.mp3",
+    "music/perfect-song.mp3",
     "music/suttumvizhi-song.mp3"
 ];
+
+function playSong(index){
+    songIndex = index;
+    song.src = playlist[songIndex];
+    song.muted = false;
+    song.play();
+}
 
 let songIndex = 0;
 
@@ -48,6 +55,7 @@ yesBtn.addEventListener("click", () => {
     document.querySelector(".container").style.display="none";
     document.getElementById("lovePage").classList.remove("hidden");
 });
+
 
 
 
