@@ -21,7 +21,9 @@ noBtn.addEventListener("mouseover", () => {
 // Play playlist 🎵
 function playNextSong() {
     song.src = playlist[songIndex];
-    song.play();
+    song.muted = false;
+    song.volume = 1;
+    song.play().catch(() => {});
 }
 
 song.addEventListener("ended", () => {
@@ -31,8 +33,10 @@ song.addEventListener("ended", () => {
     }
 });
 
-// YES click 💖
 yesBtn.addEventListener("click", () => {
+
+    // unlock audio on user click 🎵
+    song.muted = false;
     playNextSong();
 
     confetti({
@@ -44,4 +48,6 @@ yesBtn.addEventListener("click", () => {
     document.querySelector(".container").style.display="none";
     document.getElementById("lovePage").classList.remove("hidden");
 });
+
+
 
