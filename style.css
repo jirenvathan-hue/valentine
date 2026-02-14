@@ -1,11 +1,13 @@
 body{
     text-align:center;
-    font-family:Arial;
+    font-family:Arial, Helvetica, sans-serif;
     background:linear-gradient(to right,#ff758c,#ff7eb3);
     color:white;
     overflow-x:hidden;
+    margin:0;
 }
 
+/* Main first page */
 .container{
     margin-top:50px;
 }
@@ -16,6 +18,7 @@ body{
     box-shadow:0 0 20px rgba(0,0,0,0.4);
 }
 
+/* YES / NO buttons */
 button{
     padding:15px 30px;
     font-size:20px;
@@ -23,10 +26,15 @@ button{
     border-radius:10px;
     margin:20px;
     cursor:pointer;
+    transition:0.3s;
 }
 
 #yesBtn{
     background:#00ff88;
+}
+
+#yesBtn:hover{
+    background:#00e67a;
 }
 
 #noBtn{
@@ -34,14 +42,57 @@ button{
     position:absolute;
 }
 
+#noBtn:hover{
+    background:#ff1a1a;
+}
+
 .hidden{
     display:none;
 }
 
-.gallery img{
-    width:200px;
-    margin:10px;
-    border-radius:15px;
+/* LOVE PAGE */
+#lovePage{
+    padding-bottom:80px;
 }
 
+/* PHOTO GALLERY */
+.gallery{
+    display:flex;
+    flex-wrap:wrap;
+    justify-content:center;
+}
 
+.gallery img{
+    width:220px;
+    margin:15px;
+    border-radius:20px;
+    box-shadow:0 0 15px rgba(0,0,0,0.3);
+    transition:0.3s;
+}
+
+.gallery img:hover{
+    transform:scale(1.05);
+}
+
+/* 🎵 MUSIC PLAYER */
+.music-player{
+    margin:25px;
+}
+
+.music-player button{
+    background:white;
+    color:#ff4d79;
+    border:none;
+    padding:12px 22px;
+    margin:10px;
+    border-radius:25px;
+    font-size:16px;
+    cursor:pointer;
+    font-weight:bold;
+    box-shadow:0 0 10px rgba(0,0,0,0.2);
+}
+
+.music-player button:hover{
+    background:#ffe6ee;
+    transform:scale(1.05);
+}
